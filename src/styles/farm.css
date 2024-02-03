@@ -1,0 +1,10 @@
+.farm {
+    width: 50vw;
+    height: 100vh;
+}
+.farm-classic {
+    background-color: #EDDFD6;
+}
+.farm-vertical {
+    background-color: #BFD5E2;
+}
