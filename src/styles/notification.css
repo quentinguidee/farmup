@@ -1,0 +1,10 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #dde8ec;
+    line-height: 1.3;
+}
