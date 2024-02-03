@@ -1,10 +1,29 @@
 .farm {
     width: 50vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .farm-classic {
     background-color: #EDDFD6;
 }
 .farm-vertical {
     background-color: #BFD5E2;
+}
+
+.farm-content {
+    width: 600px;
+    height: 600px;
+    /* border: 1px solid blue; */
+    max-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.plot {
+    position: absolute;
+    width: 700px;
+    transform: translate(-25%, -50%);
 }

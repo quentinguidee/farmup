@@ -1,3 +1,3 @@
 export default function VerticalFarm() {
-    return <div className="farm farm-classic"></div>;
+    return <div className="farm farm-vertical"></div>;
 }
