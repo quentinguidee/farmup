@@ -27,3 +27,8 @@
     width: 700px;
     transform: translate(-25%, -50%);
 }
+
+.plot-vertical {
+    position: absolute;
+    width: 300px;
+}

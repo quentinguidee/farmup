@@ -1,8 +1,8 @@
 .toolbar {
     position: absolute;
-    top: 60px;
-    left: 20%;
-    right: 20%;
+    bottom: 30px;
+    left: 20px;
+    right: calc(50% + 20px);
     height: 60px;
     gap: 15px;
     display: flex;
