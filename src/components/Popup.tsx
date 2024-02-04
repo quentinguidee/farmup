@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect } from "react";
 
 type Props = PropsWithChildren<{
     show: boolean;
@@ -8,6 +8,15 @@ type Props = PropsWithChildren<{
 
 export default function Popup(props: Props) {
     const { children, title, onClose, show, ...others } = props;
+
+    useEffect(() => {
+        if (!show) return;
+        const onKeyup = (e: KeyboardEvent) => {
+            if (e.key === "Escape") onClose();
+        };
+        window.addEventListener("keyup", onKeyup);
+        return () => window.removeEventListener("keyup", onKeyup);
+    }, [show]);
 
     if (!show) return null;
 
