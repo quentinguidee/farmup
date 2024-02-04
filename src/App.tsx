@@ -21,6 +21,7 @@ import Popup from "./components/Popup";
 
 export default function App() {
     const [running, setRunning] = useState(false);
+    const [start, setStart] = useState(true);
     const [end, setEnd] = useState(false);
 
     const [state, setState] = useState<State>("state0");
@@ -112,12 +113,16 @@ export default function App() {
                 onWater={water}
                 onHarvest={harvest}
                 state={state}
+                setRunning={setRunning}
             />
             <Timer running={running} onEnd={onEnd} />
             <Notification />
             <Popup
-                show={!running && !end}
-                onClose={() => setRunning(true)}
+                show={start}
+                onClose={() => {
+                    setRunning(true);
+                    setStart(false);
+                }}
                 title="Cultures verticales"
             >
                 Avec une population mondiale actuelle dépassant les 7,85
@@ -167,11 +172,13 @@ export default function App() {
                     state={state}
                     timerHarvest={timerHarvest}
                     waterLevel={waterLevel}
+                    setRunning={setRunning}
                 />
                 <VerticalFarm
                     state={stateVertical}
                     timerHarvest={timerHarvestVertical}
                     waterLevel={100}
+                    setRunning={setRunning}
                 />
             </div>
         </>

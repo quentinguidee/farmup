@@ -10,10 +10,11 @@ type Props = {
     state: State;
     waterLevel: number;
     timerHarvest: number;
+    setRunning: (running: boolean) => void;
 };
 
 export default function VerticalFarm(props: Props) {
-    const { state, waterLevel, timerHarvest } = props;
+    const { state, waterLevel, timerHarvest, setRunning } = props;
 
     const [showPopup, setShowPopup] = useState(false);
 
@@ -31,12 +32,18 @@ export default function VerticalFarm(props: Props) {
                 <Plot x={2} state={state} />
                 <Plot x={3} state={state} />
                 <Info
-                    onClick={() => setShowPopup(true)}
+                    onClick={() => {
+                        setShowPopup(true);
+                        setRunning(false);
+                    }}
                     style={{ right: "10%", top: "25%" }}
                 />
                 <Popup
                     show={showPopup}
-                    onClose={() => setShowPopup(false)}
+                    onClose={() => {
+                        setShowPopup(false);
+                        setRunning(true);
+                    }}
                     title="Fonctionnement des cultures verticales"
                 >
                     Les cultures verticales révolutionnent l'agriculture en

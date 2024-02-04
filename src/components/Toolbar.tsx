@@ -7,11 +7,12 @@ type Props = {
     onPlant: () => void;
     onWater: () => void;
     onHarvest: () => void;
+    setRunning: (running: boolean) => void;
     state: State;
 };
 
 export default function Toolbar(props: Props) {
-    const { onPlant, onWater, onHarvest, state } = props;
+    const { onPlant, onWater, onHarvest, setRunning, state } = props;
 
     const [showPopup, setShowPopup] = useState(false);
 
@@ -28,12 +29,18 @@ export default function Toolbar(props: Props) {
                 Water (400L)
             </button>
             <Info
-                onClick={() => setShowPopup(true)}
+                onClick={() => {
+                    setShowPopup(true);
+                    setRunning(false);
+                }}
                 style={{ right: "35%", top: "50%" }}
             />
             <Popup
                 show={showPopup}
-                onClose={() => setShowPopup(false)}
+                onClose={() => {
+                    setShowPopup(false);
+                    setRunning(true);
+                }}
                 title="Carottes"
             >
                 En moyenne les carottes nécessitent 350L d’eau d’irrigation par
