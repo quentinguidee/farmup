@@ -24,8 +24,13 @@ export default function VerticalFarm(props: Props) {
                 value={timerHarvest}
                 color="rgb(238, 220, 227)"
                 speed={0.5}
+                icon="agriculture"
             />
-            <ProgressBar value={waterLevel} color="rgb(42, 124, 211)" />
+            <ProgressBar
+                value={waterLevel}
+                color="rgb(42, 124, 211)"
+                icon="water_drop"
+            />
             <FarmContent>
                 <Plot x={0} state={state} />
                 <Plot x={1} state={state} />
