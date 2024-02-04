@@ -102,6 +102,7 @@ export default function App() {
 
     return (
         <>
+            <img src="/logo.png" alt="logo" className="logo" />
             <Score position="left" water={totalWater} carrots={carrots * 3} />
             <Score
                 position="right"

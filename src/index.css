@@ -14,3 +14,11 @@ ul {
 strong {
     font-weight: 800;
 }
+
+.logo {
+    position: fixed;
+    height: 70px;
+    aspect-ratio: 1;
+    top: 20px;
+    left: 20px;
+}
