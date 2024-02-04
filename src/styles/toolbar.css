@@ -20,6 +20,12 @@
     cursor: pointer;
 }
 
-.toolbar-button:hover {
+.toolbar-button:disabled {
+    background-color: #33333388;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.toolbar-button:hover:not(:disabled) {
     background-color: #333333cc;
 }

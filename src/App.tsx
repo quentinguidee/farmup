@@ -51,14 +51,18 @@ export default function App() {
         if (state !== "state2") return;
         setState("state0");
         setTimerHarvest(100);
-        setWaterLevel(0);
     };
 
     return (
         <>
             <Score position="left" water={totalWater} />
             <Score position="right" water={waterLevelVertical} />
-            <Toolbar onPlant={plant} onWater={water} onHarvest={harvest} />
+            <Toolbar
+                onPlant={plant}
+                onWater={water}
+                onHarvest={harvest}
+                state={state}
+            />
             <Timer />
             <Notification />
             <div className="farms">

@@ -9,11 +9,11 @@ export default function Score(props: Props) {
         <div
             className="score"
             style={{
-                left: position === "left" ? undefined : 20,
-                right: position === "right" ? undefined : 20,
+                left: position === "left" ? 20 : undefined,
+                right: position === "right" ? 20 : undefined,
             }}
         >
-            <span className="score-value">Water: {water}</span>
+            <span className="score-value">Water: {water}L</span>
         </div>
     );
 }
