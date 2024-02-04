@@ -1,0 +1,10 @@
+.score {
+    position: fixed;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #eee;
+    border-radius: 0.5rem;
+}

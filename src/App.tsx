@@ -5,7 +5,9 @@ import VerticalFarm from "./components/VerticalFarm";
 import { Timer } from "./components/Timer";
 import { State } from "./models/plant";
 import Notification from "./components/Notification";
+import Score from "./components/Score";
 
+import "./styles/score.css";
 import "./styles/progressbar.css";
 import "./styles/toolbar.css";
 import "./styles/farm.css";
@@ -18,6 +20,7 @@ export default function App() {
     const [state, setState] = useState<State>("state0");
     const [timerHarvest, setTimerHarvest] = useState(100);
     const [waterLevel, setWaterLevel] = useState(0);
+    const [waterLevelVertical] = useState(0);
     const [totalWater, setTotalWater] = useState(0);
 
     useEffect(() => {
@@ -53,6 +56,8 @@ export default function App() {
 
     return (
         <>
+            <Score position="left" water={totalWater} />
+            <Score position="right" water={waterLevelVertical} />
             <Toolbar onPlant={plant} onWater={water} onHarvest={harvest} />
             <Timer />
             <Notification />
