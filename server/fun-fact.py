@@ -20,7 +20,7 @@ def get_fun_fact():
     global facts_history
     try:
         history_prompt = " ".join(facts_history[-10:])
-        prompt_text = f"{history_prompt} Dis-moi un nouveau fait sur l'agriculture verticale en une phrase claire et courte."
+        prompt_text = f"{history_prompt} Dis-moi un nouveau fait sur l'agriculture verticale en une phrase claire et courte, ne commence surtout pas cette phrase par un 'nouveau fait sur ...'."
 
         response = client.chat.completions.create(
             messages=[
