@@ -4,14 +4,12 @@ export default function Notification() {
     const [message, setMessage] = useState("");
 
     const generateMessage = () => {
-        // TODO: Generate a random message
-        const messages = [
-            "Your plant needs water!",
-            "Your plant needs to be harvested!",
-            "Your plant needs to be planted!",
-        ];
-        setMessage(messages[Math.floor(Math.random() * messages.length)]);
-        // TODO: End
+        fetch('http://localhost:5000/get-fun-fact')
+            .then(response => response.json())
+            .then(data => {
+                setMessage(data.fun_fact);
+            })
+            .catch(error => console.error('Error fetching fun fact:', error));
     };
 
     useEffect(() => {
