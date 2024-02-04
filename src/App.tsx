@@ -102,6 +102,7 @@ export default function App() {
 
     return (
         <>
+            <audio autoPlay={true} src="/music.mp3" hidden></audio>
             <img src="/logo.png" alt="logo" className="logo" />
             <Score position="left" water={totalWater} carrots={carrots * 3} />
             <Score
