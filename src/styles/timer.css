@@ -1,6 +1,5 @@
 .timer {
     display: flex;
-    font-family: sans-serif;
     flex-direction: row;
     justify-content: center;
     align-items: center;
