@@ -2,8 +2,9 @@
     position: fixed;
     top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    gap: .5rem;
     padding: 1rem;
     background-color: #eee;
     border-radius: 0.5rem;

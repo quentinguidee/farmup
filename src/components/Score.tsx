@@ -1,10 +1,11 @@
 type Props = {
     position: "left" | "right";
     water: number;
+    carrots: number;
 };
 
 export default function Score(props: Props) {
-    const { water, position } = props;
+    const { water, carrots, position } = props;
     return (
         <div
             className="score"
@@ -14,6 +15,7 @@ export default function Score(props: Props) {
             }}
         >
             <span className="score-value">Water: {Math.round(water)}L</span>
+            <span className="score-value">{carrots} récoltes</span>
         </div>
     );
 }

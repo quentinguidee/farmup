@@ -32,6 +32,9 @@ export default function App() {
     const [totalWater, setTotalWater] = useState(0);
     const [totalWaterVertical, setTotalWaterVertical] = useState(0);
 
+    const [carrots, setCarrots] = useState(0);
+    const [carrotsVertical, setCarrotsVertical] = useState(0);
+
     useEffect(() => {
         if (!running) return;
         const interval = setInterval(() => {
@@ -62,6 +65,7 @@ export default function App() {
                     break;
                 case "state2":
                     setStateVertical("state0");
+                    setCarrotsVertical((p) => p + 1);
                     setTimerHarvestVertical(100);
                     break;
             }
@@ -85,12 +89,17 @@ export default function App() {
         if (state !== "state2") return;
         setState("state0");
         setTimerHarvest(100);
+        setCarrots((p) => p + 1);
     };
 
     return (
         <>
-            <Score position="left" water={totalWater} />
-            <Score position="right" water={totalWaterVertical} />
+            <Score position="left" water={totalWater} carrots={carrots} />
+            <Score
+                position="right"
+                water={totalWaterVertical}
+                carrots={carrotsVertical}
+            />
             <Toolbar
                 onPlant={plant}
                 onWater={water}
