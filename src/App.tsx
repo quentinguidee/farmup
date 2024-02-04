@@ -92,6 +92,7 @@ export default function App() {
         if (state !== "state2") return;
         setState("state0");
         setTimerHarvest(100);
+        setWaterLevel(0);
         setCarrots((p) => p + 1);
     };
 
