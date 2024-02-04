@@ -6,7 +6,6 @@ import { Timer } from "./components/Timer";
 import { State } from "./models/plant";
 import Notification from "./components/Notification";
 import Score from "./components/Score";
-import Popup from "./components/Popup";
 
 import "./styles/score.css";
 import "./styles/progressbar.css";
