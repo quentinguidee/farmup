@@ -39,12 +39,21 @@ export default function Toolbar(props: Props) {
                 En moyenne les carottes nécessitent 350L d’eau d’irrigation par
                 mètres carré de culture, ce qui correspond à 3kg de carottes
                 produites (
-                <a href="https://www.service-public.pf/dag/wp-content/uploads/sites/28/2018/12/carotte-ft-culture_SDRdag_v2016.pdf">
+                <a
+                    href="https://www.service-public.pf/dag/wp-content/uploads/sites/28/2018/12/carotte-ft-culture_SDRdag_v2016.pdf"
+                    target="_blank"
+                >
                     source
                 </a>
                 ). L’agriculture verticale permet d’économiser jusqu’à 90% de
                 cette eau (
-                <a href="https://www.aquavertifarms.com/technologie">source</a>)
+                <a
+                    href="https://www.aquavertifarms.com/technologie"
+                    target="_blank"
+                >
+                    source
+                </a>
+                )
             </Popup>
             <button
                 className="toolbar-button"

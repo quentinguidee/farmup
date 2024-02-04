@@ -42,7 +42,10 @@ export default function ClassicalFarm(props: Props) {
                             de l'eau est perdue en raison de l'évaporation, du
                             ruissellement et de l'absorption inégale par le sol.
                             (
-                            <a href="https://htt.io/water-usage-in-the-agricultural-industry/#:~:text=Irrigation%20is%20the%20process%20used,or%20get%20lost%20in%20transit.">
+                            <a
+                                href="https://htt.io/water-usage-in-the-agricultural-industry/#:~:text=Irrigation%20is%20the%20process%20used,or%20get%20lost%20in%20transit."
+                                target="_blank"
+                            >
                                 source
                             </a>
                             )
@@ -53,7 +56,10 @@ export default function ClassicalFarm(props: Props) {
                             production végétale, selon le type de culture et les
                             conditions climatiques. selon une recherche de
                             l’Université de Wageningen, aux Pays-Bas. (
-                            <a href="https://www.journaldequebec.com/2021/03/23/lagriculture-consomme-trop-deau#:~:text=Les%20fermes%20verticales%20r%C3%A9duisent%20la,plantes%20est%20capt%C3%A9e%20et%20r%C3%A9utilis%C3%A9e.">
+                            <a
+                                href="https://www.journaldequebec.com/2021/03/23/lagriculture-consomme-trop-deau#:~:text=Les%20fermes%20verticales%20r%C3%A9duisent%20la,plantes%20est%20capt%C3%A9e%20et%20r%C3%A9utilis%C3%A9e."
+                                target="_blank"
+                            >
                                 source
                             </a>
                             )
@@ -62,7 +68,10 @@ export default function ClassicalFarm(props: Props) {
                             Certains rapports suggèrent que les fermes
                             verticales peuvent utiliser environ 70 à 95% moins
                             d'eau que les cultures en pleine terre. (
-                            <a href="https://www.aquavertifarms.com/technologie">
+                            <a
+                                href="https://www.aquavertifarms.com/technologie"
+                                target="_blank"
+                            >
                                 source
                             </a>
                             )

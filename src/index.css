@@ -10,3 +10,7 @@ ul {
     padding: 0;
     margin: 0 20px;
 }
+
+strong {
+    font-weight: 800;
+}

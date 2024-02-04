@@ -125,21 +125,22 @@ export default function App() {
                 plus de 75% vivront dans des régions urbaines, la croissance
                 démographique exerce une pression considérable sur les
                 ressources alimentaires, hydriques et énergétiques déjà
-                limitées. Cette demande croissante nécessite l'adoption de
-                nouveaux systèmes agricoles plus durables pour assurer une
-                production alimentaire suffisante. Les cultures verticales se
-                positionnent comme une réponse stratégique, offrant une solution
-                novatrice pour maximiser l'utilisation de l'espace, réduire la
-                consommation d'eau et répondre efficacement aux besoins
-                alimentaires croissants, tout en minimisant l'impact sur les
-                ressources naturelles.
+                limitées. Cette demande croissante nécessite l'adoption de{" "}
+                <strong>nouveaux systèmes agricoles</strong> plus{" "}
+                <strong>durables</strong> pour assurer une production
+                alimentaire suffisante. Les cultures verticales se positionnent
+                comme une réponse stratégique, offrant une solution novatrice
+                pour maximiser l'<strong>utilisation de l'espace</strong>,
+                réduire la consommation d'eau et répondre efficacement aux
+                besoins alimentaires croissants, tout en minimisant l'impact sur
+                les ressources naturelles.
                 <br />
-                Ce petit jeu a pour but de vous faire découvrir le fermes
-                verticales ! Occupez-vous de votre terre agricole en plantant,
-                arrosant et récoltant votre culture puis comparez vos résultats
-                avec la ferme verticale automatique ! Informez-vous durant la
-                partie sur son fonctionnement et ses avantages grâce aux icones
-                informations.
+                Ce petit jeu a pour but de vous faire découvrir le{" "}
+                <strong>fermes verticales</strong> ! Occupez-vous de votre terre
+                agricole en plantant, arrosant et récoltant votre culture puis
+                comparez vos résultats avec la ferme verticale automatique !
+                Informez-vous durant la partie sur son fonctionnement et ses
+                avantages grâce aux icones informations.
             </Popup>
             <Popup
                 show={end}
