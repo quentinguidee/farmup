@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
 
-export function Timer(props: { running: boolean }) {
+type Props = {
+    running: boolean;
+    onEnd: () => void;
+};
+
+export function Timer(props: Props) {
+    const { running, onEnd } = props;
+
     const [minutes, setMinutes] = useState(1);
     const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
-        if (!props.running) return;
+        if (!running) return;
         const interval = setInterval(() => {
             if (seconds === 0) {
                 if (minutes === 0) {
                     clearInterval(interval);
+                    onEnd();
                     return;
                 }
                 setSeconds(59);
@@ -19,7 +27,7 @@ export function Timer(props: { running: boolean }) {
             }
         }, 1000);
         return () => clearInterval(interval);
-    }, [minutes, seconds, props.running]);
+    }, [minutes, seconds, running]);
 
     return (
         <div className="timer">

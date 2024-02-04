@@ -17,9 +17,11 @@ import "./styles/asset.css";
 import "./styles/notification.css";
 import "./styles/popup.css";
 import "./styles/info.css";
+import Popup from "./components/Popup";
 
 export default function App() {
     const [running, setRunning] = useState(false);
+    const [end, setEnd] = useState(false);
 
     const [state, setState] = useState<State>("state0");
     const [stateVertical, setStateVertical] = useState<State>("state0");
@@ -76,7 +78,7 @@ export default function App() {
     const plant = () => {
         if (state !== "state0") return;
         setState("state1");
-        if (!running) setRunning(true);
+        // if (!running) setRunning(true);
     };
 
     const water = () => {
@@ -90,6 +92,11 @@ export default function App() {
         setState("state0");
         setTimerHarvest(100);
         setCarrots((p) => p + 1);
+    };
+
+    const onEnd = () => {
+        setRunning(false);
+        setEnd(true);
     };
 
     return (
@@ -106,8 +113,54 @@ export default function App() {
                 onHarvest={harvest}
                 state={state}
             />
-            <Timer running={running} />
+            <Timer running={running} onEnd={onEnd} />
             <Notification />
+            <Popup
+                show={!running && !end}
+                onClose={() => setRunning(true)}
+                title="Cultures verticales"
+            >
+                Avec une population mondiale actuelle dépassant les 7,85
+                milliards et une prévision de 9,8 milliards d'ici 2050, dont
+                plus de 75% vivront dans des régions urbaines, la croissance
+                démographique exerce une pression considérable sur les
+                ressources alimentaires, hydriques et énergétiques déjà
+                limitées. Cette demande croissante nécessite l'adoption de
+                nouveaux systèmes agricoles plus durables pour assurer une
+                production alimentaire suffisante. Les cultures verticales se
+                positionnent comme une réponse stratégique, offrant une solution
+                novatrice pour maximiser l'utilisation de l'espace, réduire la
+                consommation d'eau et répondre efficacement aux besoins
+                alimentaires croissants, tout en minimisant l'impact sur les
+                ressources naturelles.
+                <br />
+                Ce petit jeu a pour but de vous faire découvrir le fermes
+                verticales ! Occupez-vous de votre terre agricole en plantant,
+                arrosant et récoltant votre culture puis comparez vos résultats
+                avec la ferme verticale automatique ! Informez-vous durant la
+                partie sur son fonctionnement et ses avantages grâce aux icones
+                informations.
+            </Popup>
+            <Popup
+                show={end}
+                onClose={() => location.reload()}
+                title="Fin de partie"
+            >
+                <ul>
+                    <li>
+                        Vous avez utilisé {totalWater}L d'eau, contre{" "}
+                        {totalWaterVertical}L pour l'agriculture verticale.
+                    </li>
+                    <li>
+                        Vous avez récolté {carrots * 3}kg de carottes, contre{" "}
+                        {carrotsVertical * 4}kg pour l'agriculture verticale.
+                    </li>
+                    <br />
+                    Merci d’avoir joué et découvert l’utilité des fermes
+                    verticales ! N'hésitez pas à le partager autour de vous pour
+                    sensibiliser à cette solution d'avenir.
+                </ul>
+            </Popup>
             <div className="farms">
                 <ClassicalFarm
                     state={state}
