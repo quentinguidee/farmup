@@ -25,9 +25,3 @@ dist-ssr
 
 # Environment Variables
 .env
-
-# Python virtual environment
-venv/
-
-# Build output
-build/
