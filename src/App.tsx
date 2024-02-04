@@ -18,10 +18,15 @@ import "./styles/notification.css";
 
 export default function App() {
     const [state, setState] = useState<State>("state0");
+    const [stateVertical, setStateVertical] = useState<State>("state0");
+
     const [timerHarvest, setTimerHarvest] = useState(100);
+    const [timerHarvestVertical, setTimerHarvestVertical] = useState(100);
+
     const [waterLevel, setWaterLevel] = useState(0);
-    const [waterLevelVertical] = useState(0);
+
     const [totalWater, setTotalWater] = useState(0);
+    const [totalWaterVertical, setTotalWaterVertical] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -35,6 +40,28 @@ export default function App() {
         }, 50);
         return () => clearInterval(interval);
     }, [waterLevel, timerHarvest]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            switch (stateVertical) {
+                case "state0":
+                    setStateVertical("state1");
+                    break;
+                case "state1":
+                    if (timerHarvestVertical <= 1) {
+                        setStateVertical("state2");
+                    }
+                    setTotalWaterVertical((p) => p + 1);
+                    setTimerHarvestVertical(timerHarvestVertical - 4);
+                    break;
+                case "state2":
+                    setStateVertical("state0");
+                    setTimerHarvestVertical(100);
+                    break;
+            }
+        }, 500);
+        return () => clearInterval(interval);
+    }, [timerHarvestVertical, stateVertical]);
 
     const plant = () => {
         if (state !== "state0") return;
@@ -56,7 +83,7 @@ export default function App() {
     return (
         <>
             <Score position="left" water={totalWater} />
-            <Score position="right" water={waterLevelVertical} />
+            <Score position="right" water={totalWaterVertical} />
             <Toolbar
                 onPlant={plant}
                 onWater={water}
@@ -71,7 +98,11 @@ export default function App() {
                     timerHarvest={timerHarvest}
                     waterLevel={waterLevel}
                 />
-                <VerticalFarm />
+                <VerticalFarm
+                    state={stateVertical}
+                    timerHarvest={timerHarvestVertical}
+                    waterLevel={100}
+                />
             </div>
         </>
     );

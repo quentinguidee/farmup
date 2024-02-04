@@ -13,7 +13,7 @@ export default function Score(props: Props) {
                 right: position === "right" ? 20 : undefined,
             }}
         >
-            <span className="score-value">Water: {water}L</span>
+            <span className="score-value">Water: {Math.round(water)}L</span>
         </div>
     );
 }
