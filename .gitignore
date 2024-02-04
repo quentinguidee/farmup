@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment Variables
+.env
+
+# Python virtual environment
+venv/
+
+# Build output
+build/
