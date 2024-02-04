@@ -94,11 +94,11 @@ export default function App() {
 
     return (
         <>
-            <Score position="left" water={totalWater} carrots={carrots} />
+            <Score position="left" water={totalWater} carrots={carrots * 3} />
             <Score
                 position="right"
                 water={totalWaterVertical}
-                carrots={carrotsVertical}
+                carrots={carrotsVertical * 4}
             />
             <Toolbar
                 onPlant={plant}
