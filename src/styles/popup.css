@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
     width: min(80vw, 500px);
     padding: 20px 25px;
-    background-color: white;
+    background-color: rgb(211, 211, 231);
     border-radius: 16px;
     z-index: 100;
     line-height: 1.3;
