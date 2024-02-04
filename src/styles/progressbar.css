@@ -4,9 +4,17 @@
     background-color: #514444;
     border-radius: 6px;
     margin: 4px;
+    margin-top: 8px;
 }
 .progress-bar-value {
     border-radius: 5px;
     height: 10px;
     margin: 1px;
+}
+.progress-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
