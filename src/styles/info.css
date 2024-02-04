@@ -1,0 +1,20 @@
+.info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(56, 100, 141, 0.9);
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 90;
+    transform: translate(-50%, -50%);
+}
+.info:hover {
+    background-color: rgba(56, 100, 141, 1);
+}

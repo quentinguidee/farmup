@@ -2,3 +2,10 @@
     font-family: sans-serif;
     background-color: #242424;
 }
+
+ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding: 0;
+    margin: 0 20px;
+}

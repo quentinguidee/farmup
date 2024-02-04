@@ -6,6 +6,7 @@ import { Timer } from "./components/Timer";
 import { State } from "./models/plant";
 import Notification from "./components/Notification";
 import Score from "./components/Score";
+import Popup from "./components/Popup";
 
 import "./styles/score.css";
 import "./styles/progressbar.css";
@@ -15,6 +16,8 @@ import "./styles/window.css";
 import "./styles/timer.css";
 import "./styles/asset.css";
 import "./styles/notification.css";
+import "./styles/popup.css";
+import "./styles/info.css";
 
 export default function App() {
     const [running, setRunning] = useState(false);
