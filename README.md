@@ -16,3 +16,5 @@ Welcome to FarmUp, this little game aims to introduce you to vertical farms! Tak
 npm install     # Install dependencies
 npm run dev     # Start the app
 ```
+
+![Panier](https://github.com/quentinguidee/farmup/assets/12123721/19c9a0e0-9279-4c79-94eb-49de42757327)
