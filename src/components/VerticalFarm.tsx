@@ -64,7 +64,10 @@ export default function VerticalFarm(props: Props) {
                     contrôlé, offrant ainsi une solution durable et efficiente
                     pour répondre aux défis croissants de la sécurité
                     alimentaire mondiale. <br />
-                    <a href="http://cretau.ca/wp-content/uploads/2021/05/Fiche-e%CC%81conomique_Marai%CC%82chage-en-inte%CC%81rieur_F_edite%CC%81e.pdf">
+                    <a
+                        href="http://cretau.ca/wp-content/uploads/2021/05/Fiche-e%CC%81conomique_Marai%CC%82chage-en-inte%CC%81rieur_F_edite%CC%81e.pdf"
+                        target="_blank"
+                    >
                         En savoir plus
                     </a>
                     <div style={{ height: 10 }} />
@@ -84,7 +87,10 @@ export default function VerticalFarm(props: Props) {
                     trois principaux types de système : (1) hydroponique, (2)
                     aquaponique, et (3) ceux basés sur les substrats de culture.
                     <br />
-                    <a href="http://cretau.ca/wp-content/uploads/2021/05/Fiche-e%CC%81conomique_Marai%CC%82chage-en-inte%CC%81rieur_F_edite%CC%81e.pdf">
+                    <a
+                        href="http://cretau.ca/wp-content/uploads/2021/05/Fiche-e%CC%81conomique_Marai%CC%82chage-en-inte%CC%81rieur_F_edite%CC%81e.pdf"
+                        target="_blank"
+                    >
                         En savoir plus
                     </a>
                 </Popup>

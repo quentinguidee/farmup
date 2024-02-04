@@ -23,10 +23,10 @@ export default function Toolbar(props: Props) {
                 onClick={onPlant}
                 disabled={state !== "state0"}
             >
-                Plant
+                Planter
             </button>
             <button className="toolbar-button" onClick={onWater}>
-                Water (400L)
+                Arroser (400L)
             </button>
             <Info
                 onClick={() => {
@@ -67,7 +67,7 @@ export default function Toolbar(props: Props) {
                 onClick={onHarvest}
                 disabled={state !== "state2"}
             >
-                Harvest
+                Récolter
             </button>
         </div>
     );
