@@ -1,16 +1,21 @@
-import { useState } from "react";
 import { State } from "../models/plant";
 import Asset from "./Asset";
 import FarmContent from "./FarmContent";
+import ProgressBar from "./ProgressBar";
 
 type Props = {
     state: State;
+    waterLevel: number;
+    timerHarvest: number;
 };
 
 export default function ClassicalFarm(props: Props) {
-    const { state } = props;
+    const { state, waterLevel, timerHarvest } = props;
+
     return (
         <div className="farm farm-classic">
+            <ProgressBar value={timerHarvest} color="rgb(238, 220, 227)" />
+            <ProgressBar value={waterLevel} color="rgb(42, 124, 211)" />
             <FarmContent>
                 <Plot x={0.5} y={0.3} state={state} />
                 <Plot x={0.75} y={0.4} state={state} />

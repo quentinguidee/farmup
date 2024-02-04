@@ -13,7 +13,7 @@ export default function Toolbar(props: Props) {
                 Plant
             </button>
             <button className="toolbar-button" onClick={onWater}>
-                Water
+                Water (400L)
             </button>
             <button className="toolbar-button" onClick={onHarvest}>
                 Harvest
