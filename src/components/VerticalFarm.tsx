@@ -26,6 +26,13 @@ export default function VerticalFarm(props: Props) {
                 <Plot x={2} state={state} />
                 <Plot x={3} state={state} />
             </FarmContent>
+            <a
+                href="https://www.france.tv/france-5/silence-ca-pousse/"
+                target="_blank"
+                style={{ textDecoration: "none", color: "black" }}
+            >
+                Silence, ça pousse!
+            </a>
         </div>
     );
 }

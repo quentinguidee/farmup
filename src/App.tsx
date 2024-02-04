@@ -17,6 +17,8 @@ import "./styles/asset.css";
 import "./styles/notification.css";
 
 export default function App() {
+    const [running, setRunning] = useState(false);
+
     const [state, setState] = useState<State>("state0");
     const [stateVertical, setStateVertical] = useState<State>("state0");
 
@@ -29,6 +31,7 @@ export default function App() {
     const [totalWaterVertical, setTotalWaterVertical] = useState(0);
 
     useEffect(() => {
+        if (!running) return;
         const interval = setInterval(() => {
             if (waterLevel >= 1) {
                 setTimerHarvest(timerHarvest - 0.4);
@@ -39,9 +42,10 @@ export default function App() {
             setWaterLevel(waterLevel - 1);
         }, 50);
         return () => clearInterval(interval);
-    }, [waterLevel, timerHarvest]);
+    }, [waterLevel, timerHarvest, running]);
 
     useEffect(() => {
+        if (!running) return;
         const interval = setInterval(() => {
             switch (stateVertical) {
                 case "state0":
@@ -51,7 +55,7 @@ export default function App() {
                     if (timerHarvestVertical <= 1) {
                         setStateVertical("state2");
                     }
-                    setTotalWaterVertical((p) => p + 1);
+                    setTotalWaterVertical((p) => p + 5);
                     setTimerHarvestVertical(timerHarvestVertical - 4);
                     break;
                 case "state2":
@@ -61,11 +65,12 @@ export default function App() {
             }
         }, 500);
         return () => clearInterval(interval);
-    }, [timerHarvestVertical, stateVertical]);
+    }, [timerHarvestVertical, stateVertical, running]);
 
     const plant = () => {
         if (state !== "state0") return;
         setState("state1");
+        if (!running) setRunning(true);
     };
 
     const water = () => {
@@ -90,7 +95,7 @@ export default function App() {
                 onHarvest={harvest}
                 state={state}
             />
-            <Timer />
+            <Timer running={running} />
             <Notification />
             <div className="farms">
                 <ClassicalFarm
